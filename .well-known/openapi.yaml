@@ -4,7 +4,7 @@ info:
   description: A retrieval API for querying and filtering documents based on natural language queries and metadata
   version: 1.0.0
 servers:
-  - url: https://your-app-url.com
+  - url: https://a56f-2600-4040-59a2-3500-15f4-c0c3-6367-4706.ngrok-free.app
 paths:
   /query:
     post:

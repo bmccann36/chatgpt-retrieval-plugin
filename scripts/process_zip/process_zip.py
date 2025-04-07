@@ -32,6 +32,10 @@ async def process_file_dump(
     # use os.walk to traverse the dump directory and its subdirectories
     for root, dirs, files in os.walk("dump"):
         for filename in files:
+            if filename.startswith("__MACOSX") or filename.startswith("._"):
+                logger.info(f"⏭️ Skipping MacOS junk file: {filename}")
+                continue
+
             if len(documents) % 20 == 0:
                 logger.info(f"Processed {len(documents)} documents")
 
